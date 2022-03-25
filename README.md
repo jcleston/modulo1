@@ -1,6 +1,3 @@
-# Módulo1
-Formação Fullstack - Introdução 🚀
-
 <p align="center">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/jcleston/modulo1">  
   <a href="https://github.com/jcleston/modulo1/commits/master">
@@ -13,6 +10,9 @@ Formação Fullstack - Introdução 🚀
     <img alt="Feito por Janes Cleston" src="https://img.shields.io/badge/feito%20por-Janes%20Cleston-%237519C1">
   </a>
 </p>
+
+# Módulo1
+Formação Fullstack - Introdução 🚀
 
 Menu Geral
 <!--ts-->
