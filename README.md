@@ -57,10 +57,71 @@ promessa
 console.log('aguardando')
 ```
 
+#Na prática
+```shell
+fetch("https://api.github.com/users/jcleston")
+.then( response => response.json())
+.then( data => fetch(data.repos_url))
+.then( res => res.json())
+.then( d => console.log(d))
+.catch( err => console.log(err))
+```
+
+#Utilizando Axios
+```shell
+import axios from "axios";
+axios.get('https://api.github.com/users/jcleston')
+  .then(res => {
+    console.log(res.data);
+  });
+```
+
+#Utilizando Axios de forma mais legivel
+```shell
+import axios from "axios";
+axios
+.get("https://api.github.com/users/jcleston")
+.then(response => axios.get(response.data.repos_url))
+.then(repos => console.log(repos.data))
+.catch( error => console.log(error))
+```
+
+#Executando uma promisse em concorrência
+```shell
+import axios from "axios";
+
+Promise.all([
+  axios.get('https://api.github.com/users/jcleston'),
+  axios.get('https://api.github.com/users/jcleston/repos')
+])
+.then( response => {
+  console.log(response[0].data.login)
+  console.log(response[1].data.length)
+})
+.catch( err => console.log(err.message))
+```
 
 
+#Assync / Await
+```shell
+const promessa = new Promise( function( resolve, reject){
+  return resolve('ok')
+  // return reject('error')
+})
 
+async function start(){
+  try{
+    const result = await promessa
+    console.log(result)
+  } catch( e){
+    console.log(e)
+  } finally{
+    console.log('rodou')
+  }
+}
 
+start()
+```
 
 
 
