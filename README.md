@@ -17,22 +17,23 @@ Formação Fullstack - Introdução 🚀
 
 Menu Geral
 <!--ts-->
-   * [Javascript Assíncrono e Promises](#javascript-assincrono-promises)
-      * [Promisse](#promisse)
-      * [Na prática](#na-pratica)
-      * [Utilizando Axios](#uilizando-axios)
-      * [Utilizando Axios de forma mais legível](#utilizando-axios-de-forma-mais-legivel)
-      * [Executando uma promisse em concorrência](#executando-uma-promisse-em-concorrencia)
-      * [Assync - Await](#assync-await)
-      * [Assync - Await com fetch](#assync-await-com-fetch)
-      * [Assync - Await com fetch reduzido](#assync-await-com-fetch-reduzido)
-      * [Assync - Await com axios](#assync-await-com-axios)
-      * [Assync - Await com axios reduzido](#assync-await-com-axios-reduzido)
-      * [API exemplo](#api-exemplo)
-   * [Autor](#autor)
-   * [Minhas Skills](#minhas-skills)
-   * [Estou Aprendendo](#estou-aprendendo)
-   * [Contatos](#contatos)
+  * [Javascript Assíncrono e Promises](#javascript-assincrono-promises)
+    * [Promisse](#promisse)
+    * [Na prática](#na-prática)
+    * [Utilizando Axios](#utilizando-axios)
+    * [Utilizando Axios de forma mais legível](#utilizando-axios-de-forma-mais-legível)
+    * [Executando uma promisse em concorrência](#executando-uma-promisse-em-concorrência)
+    * [Assync e Await](#assync-e-await)
+    * [Assync e Await com fetch](#assync-e-await-com-fetch)
+    * [Assync e Await com fetch reduzido](#assync-e-await-com-fetch-reduzido)
+    * [Assync e Await com axios](#assync-e-await-com-axios)
+    * [Assync e Await com axios reduzido](#assync-e-await-com-axios-reduzido)
+    * [API exemplo](#api-exemplo)      
+  * [Trabalhando com APIs](#trabalhando-com-apis)
+  * [Autor](#autor)
+  * [Minhas Skills](#minhas-skills)
+  * [Estou Aprendendo](#estou-aprendendo)
+  * [Contatos](#contatos)
 <!--te-->
 <br /><br />
 
@@ -61,7 +62,6 @@ promessa
 
 console.log('aguardando')
 ```
-
 
 ## Na prática
 ```shell
@@ -107,7 +107,7 @@ Promise.all([
 .catch( err => console.log(err.message))
 ```
 
-## Assync - Await
+## Assync e Await
 ```shell
 const promessa = new Promise( function( resolve, reject){
   return resolve('ok')
@@ -128,7 +128,7 @@ async function start(){
 start()
 ```
 
-## Assync - Await com fetch
+## Assync e Await com fetch
 ```shell
 async function start(){
   const response = await fetch('https://api.github.com/users/jcleston')
@@ -141,7 +141,7 @@ async function start(){
 start().catch(e => console.log(e))
 ```
 
-## Assync - Await com fetch reduzido
+## Assync e Await com fetch reduzido
 ```shell
 async function start(){
   const url = "https://api.github.com/users/jcleston"
@@ -152,7 +152,7 @@ async function start(){
 start().catch(e => console.log(e))
 ```
 
-## Assync - Await com axios
+## Assync e Await com axios
 ```shell
 import axios from 'axios'
 async function fetchRepos(){
@@ -167,7 +167,7 @@ async function fetchRepos(){
 fetchRepos()
 ```
 
-## Assync - Await com axios reduzido
+## Assync e Await com axios reduzido
 ```shell
 import axios from 'axios'
 async function fetchRepos() {
@@ -188,7 +188,7 @@ https.get(API, res => {
 console.log('conectando API')
 ```
 
-
+## Trabalhando com APIs
 
 
 
