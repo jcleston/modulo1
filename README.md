@@ -191,7 +191,8 @@ console.log('conectando API')
 ## Trabalhando com APIs
 
 Arquitetura de exemplo
-![arquitetura-api.png](https://raw.githubusercontent.com/jcleston/modulo1/master/imagens/arquitetura-api.png]
+
+![Arquitetura API](https://raw.githubusercontent.com/jcleston/modulo1/master/imagens/arquitetura-api.png)
 
 
 
