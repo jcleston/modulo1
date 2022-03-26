@@ -1,6 +1,3 @@
-/** 
-promisse* 
-*/
 let aceitar = true
 
 console.log('iniciado')
