@@ -14,10 +14,21 @@
 # Módulo1
 Formação Fullstack - Introdução 🚀
 
+
 Menu Geral
 <!--ts-->
-   * [API](#api)
-   * [Promisse](#promisse)
+   * [Javascript Assíncrono e Promises](#javascript-assincrono-promises)
+      * [Promisse](#promisse)
+      * [Na prática](#na-pratica)
+      * [Utilizando Axios](#uilizando-axios)
+      * [Utilizando Axios de forma mais legível](#utilizando-axios-de-forma-mais-legivel)
+      * [Executando uma promisse em concorrência](#executando-uma-promisse-em-concorrencia)
+      * [Assync - Await](#assync-await)
+      * [Assync - Await com fetch](#assync-await-com-fetch)
+      * [Assync - Await com fetch reduzido](#assync-await-com-fetch-reduzido)
+      * [Assync - Await com axios](#assync-await-com-axios)
+      * [Assync - Await com axios reduzido](#assync-await-com-axios-reduzido)
+      * [API exemplo](#api-exemplo)
    * [Autor](#autor)
    * [Minhas Skills](#minhas-skills)
    * [Estou Aprendendo](#estou-aprendendo)
@@ -25,15 +36,9 @@ Menu Geral
 <!--te-->
 <br /><br />
 
-## API
-```shell
-const https = require('https')
-const API = 'https://jsonplaceholder.typicode.com/users?_limit=2'
-https.get(API, res => {
-    console.log(res.statusCode)
-})
-console.log('conectando API')
-```
+
+## Javascript Assíncrono e Promises
+
 
 ## Promisse
 ```shell
@@ -57,7 +62,8 @@ promessa
 console.log('aguardando')
 ```
 
-#Na prática
+
+## Na prática
 ```shell
 fetch("https://api.github.com/users/jcleston")
 .then( response => response.json())
@@ -67,7 +73,7 @@ fetch("https://api.github.com/users/jcleston")
 .catch( err => console.log(err))
 ```
 
-#Utilizando Axios
+## Utilizando Axios
 ```shell
 import axios from "axios";
 axios.get('https://api.github.com/users/jcleston')
@@ -76,7 +82,7 @@ axios.get('https://api.github.com/users/jcleston')
   });
 ```
 
-#Utilizando Axios de forma mais legivel
+## Utilizando Axios de forma mais legível
 ```shell
 import axios from "axios";
 axios
@@ -86,7 +92,7 @@ axios
 .catch( error => console.log(error))
 ```
 
-#Executando uma promisse em concorrência
+## Executando uma promisse em concorrência
 ```shell
 import axios from "axios";
 
@@ -101,8 +107,7 @@ Promise.all([
 .catch( err => console.log(err.message))
 ```
 
-
-#Assync / Await
+## Assync - Await
 ```shell
 const promessa = new Promise( function( resolve, reject){
   return resolve('ok')
@@ -123,7 +128,7 @@ async function start(){
 start()
 ```
 
-#Assync / Await com fetch
+## Assync - Await com fetch
 ```shell
 async function start(){
   const response = await fetch('https://api.github.com/users/jcleston')
@@ -136,7 +141,7 @@ async function start(){
 start().catch(e => console.log(e))
 ```
 
-#Assync / Await com fetch reduzido
+## Assync - Await com fetch reduzido
 ```shell
 async function start(){
   const url = "https://api.github.com/users/jcleston"
@@ -147,7 +152,7 @@ async function start(){
 start().catch(e => console.log(e))
 ```
 
-#Assync / Await com axios
+## Assync - Await com axios
 ```shell
 import axios from 'axios'
 async function fetchRepos(){
@@ -162,7 +167,7 @@ async function fetchRepos(){
 fetchRepos()
 ```
 
-#Assync / Await com axios reduzido
+## Assync - Await com axios reduzido
 ```shell
 import axios from 'axios'
 async function fetchRepos() {
@@ -173,11 +178,15 @@ async function fetchRepos() {
 fetchRepos().catch((e) => console.log(e))
 ```
 
-
-
-
-
-
+## API exemplo
+```shell
+const https = require('https')
+const API = 'https://jsonplaceholder.typicode.com/users?_limit=2'
+https.get(API, res => {
+    console.log(res.statusCode)
+})
+console.log('conectando API')
+```
 
 
 
