@@ -28,8 +28,18 @@ Menu Geral
     * [Assync e Await com fetch reduzido](#assync-e-await-com-fetch-reduzido)
     * [Assync e Await com axios](#assync-e-await-com-axios)
     * [Assync e Await com axios reduzido](#assync-e-await-com-axios-reduzido)
-    * [API exemplo](#api-exemplo)      
+    * [API exemplo](#api-exemplo)
   * [Trabalhando com APIs](#trabalhando-com-apis)
+    * [API exemplo simples](#api-exemplo-simples)
+    * [Json](#json)
+    * [Métodos HTTP](#métodos-http)
+    * [Insomnia](#insomnia)
+    * [API Back-End](#api-back-end)
+    * [Iniciando projeto em NodeJS](#iniciando-projeto-em-nodejs)
+
+      
+
+    
   * [Autor](#autor)
   * [Minhas Skills](#minhas-skills)
   * [Estou Aprendendo](#estou-aprendendo)
@@ -178,7 +188,14 @@ async function fetchRepos() {
 fetchRepos().catch((e) => console.log(e))
 ```
 
-## API exemplo
+## Trabalhando com APIs
+
+Arquitetura de exemplo
+
+![Arquitetura API](https://raw.githubusercontent.com/jcleston/modulo1/master/imagens/arquitetura-api.png)
+
+
+## API exemplo simples
 ```shell
 const https = require('https')
 const API = 'https://jsonplaceholder.typicode.com/users?_limit=2'
@@ -188,11 +205,66 @@ https.get(API, res => {
 console.log('conectando API')
 ```
 
-## Trabalhando com APIs
+## Json
+```shell
+#Estrutura padrão
+{
+  "id": "1",
+  "nome": "Nome aqui",
+  "descricao": "Descricao aqui",
+  "array": [
+    "dado1",
+    "dado2",
+    "dado3"
+  ],
+  "objeto": {
+    "coluna1": "valor1",
+    "coluna2": "valor2"
+  }
+}
+```
+Documentação oficial no link: <a href="https://www.json.org/json-en.html">www.json.org</a>
 
-Arquitetura de exemplo
+## Métodos HTTP
 
-![Arquitetura API](https://raw.githubusercontent.com/jcleston/modulo1/master/imagens/arquitetura-api.png)
+<b>GET</b> - A API fornece informações
+
+<b>POST</b> - A API recebe informações que devem ou não ser registradas
+
+<b>DELETE</b> - A API recebe identificadores de registros que devem ser deletados
+
+<b>PUT</b> - A API recebe informações para update de um ou mais registros
+
+<b>PATCH</b> - A API recebe informações para update de um registro
+
+
+## Insomnia
+```shell
+#instalação
+$ sudo dnf install snapd
+$ sudo ln -s /var/lib/snapd/snap /snap
+$ sudo snap install insomnia
+```
+Documentação oficial no link: <a href="https://insomnia.rest/download">https://insomnia.rest</a>
+
+
+## API Back-End
+
+## Iniciando projeto em NodeJS
+```shell
+#instalação
+$ mkdir APIs
+$ cd APIs
+$ npm init -y
+$ code .
+```
+
+
+
+
+
+
+
 
 
 
