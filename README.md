@@ -258,6 +258,19 @@ $ cd APIs
 $ npm init -y
 $ code .
 ```
+Preparar o arquivo package.json da seguinte forma:
+```shell
+{
+  "name": "APIs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Janes Cleston",
+  "license": "ISC"
+}
+```
 
 
 
