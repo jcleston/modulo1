@@ -6,5 +6,8 @@
   "scripts": {},
   "keywords": [],
   "author": "Janes Cleston",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
