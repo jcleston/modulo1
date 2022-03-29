@@ -37,6 +37,11 @@ Menu Geral
     * [API Back-End](#api-back-end)
       * [Iniciando projeto em NodeJS](#iniciando-projeto-em-nodejs)
       * [Express](#express)
+      * [Criando server](#criando-server)
+      * [Criando rotas](#criando-rotas)
+      * [POST](#post)
+      * [PUT](#put)
+      * [DELETE](#delete)
 
       
 
@@ -277,18 +282,63 @@ Preparar o arquivo package.json da seguinte forma:
 ```shell
 #instalação
 $ npm i express
-ou
-$ yarn add express
 ```
 
 ## Criando server
-Para dar start na aplicação:
+Criar arquivo index.js na raiz do projeto
 ```shell
-
-
+const express = require('express')
+const app = express()
+app.listen('3000')
 ```
 
+Para dar start na aplicação:
+```shell
+#iniciar o server
+$ node .
+
+#acessar a página
 localhost:3000
+```
+## Criando rotas
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+#adicione as rotas
+const express = require('express')
+const app = express()
+app.listen('3000')
+app.route('/').get( (req,res) => res.send("index"))
+app.route('/pagina').get( (req,res) => res.send("página"))
+
+#acessar as páginas
+localhost:3000
+localhost:3000/pagina
+```
+Obs: dessa forma já temos o GET
+
+## POST
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+#adicione as rotas
+const express = require('express')
+const app = express()
+app.listen('3000')
+
+app.use(express.json())
+app.route('/').post((req, res) => res.send(req.body))
+
+#acessar o insomnia e criar um POST rodando na porta localhost:3000
+#configurar o POST para o formato JSON adicionando o conteúdo:
+{
+	"content": "conteúdo do body"
+}
+
+#efetuar o SEND
+```
+
+## PUT
+
+## DELETE
 
 
 
