@@ -323,7 +323,7 @@ Edite o arquivo index.js conforme exemplo abaixo
 const express = require('express')
 const app = express()
 app.listen('3000')
-
+//middleware
 app.use(express.json())
 app.route('/').post((req, res) => res.send(req.body))
 
@@ -337,9 +337,43 @@ app.route('/').post((req, res) => res.send(req.body))
 ```
 
 ## PUT
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+const express = require('express')
+const app = express()
+app.listen('3000')
+//middleware
+app.use(express.json())
+let author = "Cleston"
+app.route('/').get((req,res) => res.send(author))
+app.route('/').put((req,res) => {
+    author = req.body.author
+    res.send(author)
+})
+
+#acessar o insomnia e criar um PUT rodando na porta localhost:3000/
+#configurar o PUT para o formato JSON adicionando o conteúdo:
+{
+	"author": "Janes Cleston"
+}
+
+#efetuar o SEND
+```
+
 
 ## DELETE
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+const express = require('express')
+const app = express()
+app.listen('3000')
+app.route('/:identificador').delete((req,res) => {
+    res.send(req.params.identificador)
+})
 
+#acessar o insomnia e criar um DELETE rodando na porta localhost:3000/1234
+#efetuar o SEND
+```
 
 
 
