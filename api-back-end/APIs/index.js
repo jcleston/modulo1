@@ -17,3 +17,6 @@ app.use(express.json())
 // app.route('/').post((req, res) => console.log(req.body))
 app.route('/').post((req, res) => res.send(req.body))
 //-------------------------------------------------------
+
+
+//Para acesso PUT
