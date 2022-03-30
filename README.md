@@ -15,7 +15,7 @@
 Formação Fullstack - Introdução 🚀
 
 
-Menu Geral
+## Menu Geral
 <!--ts-->
   * [Javascript Assíncrono e Promises](#javascript-assincrono-promises)
     * [Promisse](#promisse)
@@ -42,8 +42,13 @@ Menu Geral
       * [POST](#post)
       * [PUT](#put)
       * [DELETE](#delete)
-
-      
+    * [Parâmetros nas requisições](#parâmetros-nas-requisições)
+      * [Body Params](#body-params)
+      * [Route Params](#route-params)
+      * [Query Params](#query-params)
+    * [Consumindo API com NodeJS](#consumindo-api-com-nodejs)
+      * [API do github](#api-do-github)
+      * [Consumindo com axios](#consumindo-com-axios)      
 
     
   * [Autor](#autor)
@@ -375,14 +380,76 @@ app.route('/:identificador').delete((req,res) => {
 #efetuar o SEND
 ```
 
+## Parâmetros nas requisições
+São formas de passarmos informações para o código
+exemplos: 
+localhost:3000/?parametro=valor
+localhost:3000/valor
+ou através do body no formato json
+
+## Body Params
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+//middleware
+app.use(express.json())
+app.route('/').post((req,res) => {
+    const {campo1, campo2} = req.body
+    res.send(`espaço1: ${campo1} e espaço2: ${campo2}`)
+})
+#acessar o insomnia e criar um POST, rodando na porta localhost:3000/
+#configurar o POST no BODY para o formato JSON adicionando o conteúdo:
+{
+	"campo1" : "valor1",
+	"campo2" : "valor2",
+	"array" : [
+		"valor1",
+		"valor2"
+	]
+}
+#efetuar o SEND
+```
 
 
+## Route Params
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+app.route('/').get((req, res) => res.send("página"))
+app.route('/:variavel').get((req, res) => res.send(req.params.variavel))
+app.route('/identidade/:nome').get((req, res) => res.send(req.params.nome))
+
+#acessar o insomnia e criar um GET, rodando na porta localhost:3000/
+#testar no insomnia
+localhost:3000/
+localhost:3000/identidade
+localhost:3000/identidade/teste
+#efetuar o SEND
+```
+
+## Query Params
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+app.route('/').get((req, res) => res.send(req.query.nome))
+app.route('/about/user').get((req, res) => res.send(req.query))
+app.route('/about/user').get((req, res) => res.send(req.query.id))
+
+#acessar o insomnia e criar um GET, rodando na porta localhost:3000/
+#Testar no insomnia
+localhost:3000/
+localhost:3000/about/user?nome=teste
+localhost:3000/about/user?nome=teste&id=123
+#efetuar o SEND
+```
+
+## Consumindo API com NodeJS
+
+## API do github
+
+## Consumindo com axios
 
 
-
-
-
-
+<!--ts-->
+[Voltar para o Menu Geral](#menu-geral)
+<!--te-->
 
 
 

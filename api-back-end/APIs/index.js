@@ -18,6 +18,7 @@ app.listen('3000')
 
 
 //Para acesso PUT
+//middleware
 // app.use(express.json())
 // let author = "Cleston"
 // app.route('/').get((req,res) => res.send(author))
@@ -27,6 +28,34 @@ app.listen('3000')
 // })
 
 //Para acesso DELETE
-app.route('/:identificador').delete((req,res) => {
-    res.send(req.params.identificador)
-})
+// app.route('/:identificador').delete((req,res) => {
+//     res.send(req.params.identificador)
+// })
+
+
+//---------------------------------------------------------
+// Utilizando parâmetros nas requisições
+//BODY PARAMS
+//middleware
+// app.use(express.json())
+// app.route('/').post((req, res) => {
+//     const { campo1, campo2 } = req.body
+//     res.send(`espaço1: ${campo1} e espaço2: ${campo2}`)
+// })
+
+//ROUTE PARAMS
+// app.route('/').get((req, res) => res.send("página"))
+// app.route('/:variavel').get((req, res) => res.send(req.params.variavel))
+// app.route('/identidade/:nome').get((req, res) => res.send(req.params.nome))
+// 
+//Testar no insomnia
+// localhost:3000/identidade/teste
+
+//Query Params
+app.route('/').get((req, res) => res.send(req.query.nome))
+app.route('/about/user').get((req, res) => res.send(req.query))
+app.route('/about/user').get((req, res) => res.send(req.query.id))
+//Testar no insomnia
+// localhost:3000/
+// localhost:3000/about/user?nome=teste
+// localhost:3000/about/user?nome=teste&id=123
