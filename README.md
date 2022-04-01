@@ -54,8 +54,14 @@ Formação Fullstack - Introdução 🚀
     * [Consumindo API com NodeJS](#consumindo-api-com-nodejs)
       * [API do github](#api-do-github)
       * [Consumindo com axios](#consumindo-com-axios)      
+    * [API no Front-End com Fetch](#api-no-front-end-com-fetch)
+      * [Fetch-GET](#fetch-get)
+      * [Fetch-GET com parâmentros](#fetch-get-com-parâmentros)
+      * [Fetch-POST](#fetch-post)
+      * [Fetch-PUT](#fetch-put)
+      * [Fetch-DELETE](#fetch-delete)
 
-    
+      
   * [Autor](#autor)
   * [Minhas Skills](#minhas-skills)
   * [Estou Aprendendo](#estou-aprendendo)
@@ -634,6 +640,19 @@ localhost:3000/
 
 [Voltar para o Menu Geral](#menu-geral)
 </h4>
+
+## API no Front-End com Fetch
+
+## Fetch-GET
+
+## Fetch-GET com parâmentros
+
+## Fetch-POST
+
+## Fetch-PUT
+
+## Fetch-DELETE
+
 
 
 

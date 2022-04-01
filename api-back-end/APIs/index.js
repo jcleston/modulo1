@@ -63,17 +63,14 @@
 //API do github
 //https://api.github.com/users/jcleston
 
+// const express = require('express')
+// const axios = require('axios')
+// const app = express()
+// app.listen('3000')
 
-const express = require('express')
-const axios = require('axios')
-
-const app = express()
-
-app.listen('3000')
-
-//Consumindo com axios
-app.route('/').get((req, res) => {
-    axios.get('https://api.github.com/users/jcleston')
-    .then(result => res.send(`<img src="${result.data.avatar_url}">`))
-    .catch(error => console.error(error))
-})
+// //Consumindo com axios
+// app.route('/').get((req, res) => {
+//     axios.get('https://api.github.com/users/jcleston')
+//     .then(result => res.send(`<img src="${result.data.avatar_url}">`))
+//     .catch(error => console.error(error))
+// })
