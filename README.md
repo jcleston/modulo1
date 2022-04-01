@@ -17,6 +17,11 @@ Formação Fullstack - Introdução 🚀
 
 ## Menu Geral
 <!--ts-->
+  * [Instalação](#instalação)
+    * [Bash](#bash)
+    * [NPM](#npm)
+    * [NodeJs](#nodejs)
+    * [React](#react)
   * [Javascript Assíncrono e Promises](#javascript-assincrono-promises)
     * [Promisse](#promisse)
     * [Na prática](#na-prática)
@@ -58,6 +63,30 @@ Formação Fullstack - Introdução 🚀
 <!--te-->
 <br /><br />
 
+## Instalação
+Para iniciar o desenvolvimento, é necessário efetuar as seguintes instalações:
+
+## Bash
+```shell
+$ sudo apt-get update
+$ sudo apt-get install bash
+```
+## NPM
+```shell
+$ sudo apt install npm
+```
+## NodeJs
+```shell
+$ sudo apt update
+$ sudo apt install nodejs
+$ node -v
+```
+
+## React
+```shell
+$ npx create-react-app my-app
+$ npm start
+```
 
 ## Javascript Assíncrono e Promises
 
@@ -443,6 +472,10 @@ localhost:3000/about/user?nome=teste&id=123
 ## Consumindo API com NodeJS
 
 ## API do github
+```shell
+#url para acessar a API pública do GitHub
+https://api.github.com/users/jcleston
+```
 
 ## Consumindo com axios
 

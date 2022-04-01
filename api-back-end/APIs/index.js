@@ -1,8 +1,8 @@
-const express = require('express')
+// const express = require('express')
 
-const app = express()
+// const app = express()
 
-app.listen('3000')
+// app.listen('3000')
 
 //Para acessos GET
 // app.route('/').get((req, res) => res.send("index"))
@@ -52,10 +52,30 @@ app.listen('3000')
 // localhost:3000/identidade/teste
 
 //Query Params
-app.route('/').get((req, res) => res.send(req.query.nome))
-app.route('/about/user').get((req, res) => res.send(req.query))
-app.route('/about/user').get((req, res) => res.send(req.query.id))
+// app.route('/').get((req, res) => res.send(req.query.nome))
+// app.route('/about/user').get((req, res) => res.send(req.query))
+// app.route('/about/user').get((req, res) => res.send(req.query.id))
 //Testar no insomnia
 // localhost:3000/
 // localhost:3000/about/user?nome=teste
 // localhost:3000/about/user?nome=teste&id=123
+
+//API do github
+//https://api.github.com/users/jcleston
+
+
+const express = require('express')
+const axios = require('axios')
+
+const app = express()
+
+app.listen('3000')
+
+
+//Consumindo com axios
+app.route('/').get((req, res) => {
+    // res.send("hello")
+    axios.get('https://api.github.com/users/jcleston')
+    .then(result => res.send(`<img src="${result.data.avatar_url}">`))
+    .catch(error => console.error(error))
+})

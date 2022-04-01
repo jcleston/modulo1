@@ -8,6 +8,7 @@
   "author": "Janes Cleston",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "express": "^4.17.3"
   }
 }
