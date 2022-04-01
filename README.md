@@ -88,6 +88,11 @@ $ npx create-react-app my-app
 $ npm start
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Javascript Assíncrono e Promises
 
 
@@ -113,6 +118,11 @@ promessa
 console.log('aguardando')
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Na prática
 ```shell
 fetch("https://api.github.com/users/jcleston")
@@ -123,6 +133,11 @@ fetch("https://api.github.com/users/jcleston")
 .catch( err => console.log(err))
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Utilizando Axios
 ```shell
 import axios from "axios";
@@ -131,6 +146,11 @@ axios.get('https://api.github.com/users/jcleston')
     console.log(res.data);
   });
 ```
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Utilizando Axios de forma mais legível
 ```shell
@@ -141,6 +161,11 @@ axios
 .then(repos => console.log(repos.data))
 .catch( error => console.log(error))
 ```
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Executando uma promisse em concorrência
 ```shell
@@ -156,6 +181,11 @@ Promise.all([
 })
 .catch( err => console.log(err.message))
 ```
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Assync e Await
 ```shell
@@ -178,6 +208,11 @@ async function start(){
 start()
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Assync e Await com fetch
 ```shell
 async function start(){
@@ -191,6 +226,11 @@ async function start(){
 start().catch(e => console.log(e))
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Assync e Await com fetch reduzido
 ```shell
 async function start(){
@@ -201,6 +241,11 @@ async function start(){
 }
 start().catch(e => console.log(e))
 ```
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Assync e Await com axios
 ```shell
@@ -217,6 +262,11 @@ async function fetchRepos(){
 fetchRepos()
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Assync e Await com axios reduzido
 ```shell
 import axios from 'axios'
@@ -228,12 +278,22 @@ async function fetchRepos() {
 fetchRepos().catch((e) => console.log(e))
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Trabalhando com APIs
 
 Arquitetura de exemplo
 
 ![Arquitetura API](https://raw.githubusercontent.com/jcleston/modulo1/master/imagens/arquitetura-api.png)
 
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## API exemplo simples
 ```shell
@@ -244,6 +304,11 @@ https.get(API, res => {
 })
 console.log('conectando API')
 ```
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Json
 ```shell
@@ -265,6 +330,11 @@ console.log('conectando API')
 ```
 Documentação oficial no link: <a href="https://www.json.org/json-en.html">www.json.org</a>
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Métodos HTTP
 
 <b>GET</b> - A API fornece informações
@@ -277,6 +347,10 @@ Documentação oficial no link: <a href="https://www.json.org/json-en.html">www.
 
 <b>PATCH</b> - A API recebe informações para update de um registro
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Insomnia
 ```shell
@@ -287,6 +361,10 @@ $ sudo snap install insomnia
 ```
 Documentação oficial no link: <a href="https://insomnia.rest/download">https://insomnia.rest</a>
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## API Back-End
 
@@ -318,6 +396,12 @@ Preparar o arquivo package.json da seguinte forma:
 $ npm i express
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
+
 ## Criando server
 Criar arquivo index.js na raiz do projeto
 ```shell
@@ -334,6 +418,12 @@ $ node .
 #acessar a página
 localhost:3000
 ```
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Criando rotas
 Edite o arquivo index.js conforme exemplo abaixo
 ```shell
@@ -349,6 +439,11 @@ localhost:3000
 localhost:3000/pagina
 ```
 Obs: dessa forma já temos o GET
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## POST
 Edite o arquivo index.js conforme exemplo abaixo
@@ -369,6 +464,11 @@ app.route('/').post((req, res) => res.send(req.body))
 
 #efetuar o SEND
 ```
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## PUT
 Edite o arquivo index.js conforme exemplo abaixo
@@ -394,6 +494,10 @@ app.route('/').put((req,res) => {
 #efetuar o SEND
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## DELETE
 Edite o arquivo index.js conforme exemplo abaixo
@@ -409,12 +513,22 @@ app.route('/:identificador').delete((req,res) => {
 #efetuar o SEND
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Parâmetros nas requisições
 São formas de passarmos informações para o código
 exemplos: 
 localhost:3000/?parametro=valor
 localhost:3000/valor
 ou através do body no formato json
+
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Body Params
 Edite o arquivo index.js conforme exemplo abaixo
@@ -438,6 +552,10 @@ app.route('/').post((req,res) => {
 #efetuar o SEND
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Route Params
 Edite o arquivo index.js conforme exemplo abaixo
@@ -454,6 +572,11 @@ localhost:3000/identidade/teste
 #efetuar o SEND
 ```
 
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
+
 ## Query Params
 Edite o arquivo index.js conforme exemplo abaixo
 ```shell
@@ -468,6 +591,10 @@ localhost:3000/about/user?nome=teste
 localhost:3000/about/user?nome=teste&id=123
 #efetuar o SEND
 ```
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Consumindo API com NodeJS
 
@@ -476,13 +603,37 @@ localhost:3000/about/user?nome=teste&id=123
 #url para acessar a API pública do GitHub
 https://api.github.com/users/jcleston
 ```
+<h3 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h3>
 
 ## Consumindo com axios
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+const express = require('express')
+const axios = require('axios')
 
+const app = express()
 
-<!--ts-->
+app.listen('3000')
+
+//Consumindo com axios
+app.route('/').get((req, res) => {
+    axios.get('https://api.github.com/users/jcleston')
+    .then(result => res.send(`<img src="${result.data.avatar_url}">`))
+    .catch(error => console.error(error))
+})
+
+#acessar o insomnia e criar um GET, rodando na porta localhost:3000/
+#Testar no insomnia
+localhost:3000/
+```
+
+<h3 align="right">
+
 [Voltar para o Menu Geral](#menu-geral)
-<!--te-->
+</h3>
 
 
 

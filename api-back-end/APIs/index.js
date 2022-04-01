@@ -71,10 +71,8 @@ const app = express()
 
 app.listen('3000')
 
-
 //Consumindo com axios
 app.route('/').get((req, res) => {
-    // res.send("hello")
     axios.get('https://api.github.com/users/jcleston')
     .then(result => res.send(`<img src="${result.data.avatar_url}">`))
     .catch(error => console.error(error))
