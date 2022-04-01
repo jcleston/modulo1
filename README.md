@@ -455,8 +455,6 @@ localhost:3000/about/user?nome=teste&id=123
 
 
 
-
-
 ## Autor
 <img src="https://avatars.githubusercontent.com/u/13952621?v=4" width="100px;" alt=""/>
 <br />
