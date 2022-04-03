@@ -642,7 +642,7 @@ localhost:3000/
 </h4>
 
 ## API no Front-End com Fetch
-
+Para acessar pipelines HTTP
 ## Fetch-GET
 
 ## Fetch-GET com parâmentros
