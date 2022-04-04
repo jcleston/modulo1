@@ -644,8 +644,102 @@ localhost:3000/
 ## API no Front-End com Fetch
 Para acessar pipelines HTTP
 ## Fetch-GET
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+const express = require('express')
+const app = express()
+app.listen(5500, () => console.log('Rodando na porta 5500'))
+app.use(express.json())
+let users = [{
+  id: 1,
+  name: "Janes Cleston",
+  avatar: "https://avatars.githubusercontent.com/u/13952621?s=400&u=a07b6d0bd69af3798bf9cb1d75024851901bfafb&v=4",
+  city: "Brasília"
+}]
+
+app.route('/api').get((req, res) => res.json({
+  users
+}))
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo API com Fetch</title>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div id="renderApiResult"></div>
+</body>
+</html>
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+const url="http://localhost:5500/api"
+
+function getUsers(){
+    fetch(url)
+    .then(response => response.json())
+    .then(data => renderApiResult.textContent = JSON.stringify(data))
+    .catch(error => console.error(error))
+}
+
+getUsers()
+```
+<p>Execute o npm start no diretório node-api-discover-main</p>
+<p>Execute o index.html com o Live Server</p>
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
 
 ## Fetch-GET com parâmentros
+
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+const url = "http://localhost:5500/api"
+let id = 1
+function getUser() {
+    fetch(`${url}/` + id)
+        .then(response => response.json())
+        .then(data => {
+            userName.textContent = data.name
+            userCity.textContent = data.city
+            userAvatar.src = data.avatar
+        })
+        .catch(error => console.error(error))
+}
+
+getUser()
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo API com Fetch</title>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <p id="userName"></p>
+    <p id="userCity"></p>
+    <img src="" id="userAvatar">
+</body>
+</html>
+```
+
+<p>Execute o npm start no diretório node-api-discover-main</p>
+<p>Execute o index.html com o Live Server</p>
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
 
 ## Fetch-POST
 
