@@ -699,6 +699,34 @@ getUsers()
 
 ## Fetch-GET com parâmentros
 
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+const express = require('express')
+const app = express()
+app.listen(5500, () => console.log('Rodando na porta 5500'))
+app.use(express.json())
+let users = [{
+  id: 1,
+  name: "Janes Cleston",
+  avatar: "https://avatars.githubusercontent.com/u/13952621?s=400&u=a07b6d0bd69af3798bf9cb1d75024851901bfafb&v=4",
+  city: "Brasília"
+}]
+
+app.route('/api').get((req, res) => res.json({
+  users
+}))
+
+app.route('/api/:id').get((req, res) => {
+  const userId = req.params.id
+  const user = users.find(user => Number(user.id) === Number(userId))
+  if (!user) {
+    return res.json('User nor found!')
+  }
+
+  res.json(user)
+})
+```
+
 Edite o arquivo main.js conforme exemplo abaixo
 ```shell
 const url = "http://localhost:5500/api"
@@ -742,6 +770,82 @@ Edite o arquivo index.html conforme exemplo abaixo
 </h4>
 
 ## Fetch-POST
+
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+const express = require('express')
+const app = express()
+app.listen(5500, () => console.log('Rodando na porta 5500'))
+app.use(express.json())
+let users = [{
+  id: 1,
+  name: "Janes Cleston",
+  avatar: "https://avatars.githubusercontent.com/u/13952621?s=400&u=a07b6d0bd69af3798bf9cb1d75024851901bfafb&v=4",
+  city: "Brasília"
+}]
+
+app.route('/api').post((req, res) => {
+  const lastId = users[users.length - 1].id
+  users.push({
+    id: lastId + 1,
+    name: req.body.name,
+    avatar: req.body.avatar,
+    city: req.body.city
+  })
+  res.json('Saved user')
+})
+```
+
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+const url = "http://localhost:5500/api"
+//POST
+function addUser(newUser) {
+    fetch(url, {
+        method: "POST",
+        body: JSON.stringify(newUser),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => alertApi.textContent = data)
+        .catch(error => console(error))
+
+}
+
+const newUser = {
+    name: "Teste",
+    avatar: "https://picsum.photos/200/300",
+    city: "asd"
+}
+addUser(newUser)
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo API com Fetch</title>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div id="alertApi">ok</div>
+    <hr>
+    <div id="renderApiResult"></div>
+    <hr>
+    <p id="userName"></p>
+    <p id="userCity"></p>
+    <img src="" id="userAvatar">
+</body>
+</html>
+```
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
 
 ## Fetch-PUT
 
