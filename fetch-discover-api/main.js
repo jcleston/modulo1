@@ -9,9 +9,8 @@ function getUsers() {
 }
 
 // GET com paramêtro
-let id = 2
-function getUser() {
-    fetch(`${url}/` + id)
+function getUser(id) {
+    fetch(`${url}/${id}`)
         .then(response => response.json())
         .then(data => {
             userName.textContent = data.name
@@ -36,6 +35,20 @@ function addUser(newUser) {
 
 }
 
+//PUT
+function updateUser(updatedUser, id) {
+    fetch(`${url}/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(updatedUser),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => alertApi.textContent = data)
+        .catch(error => console(error))
+}
+
 const newUser = {
     name: "Teste",
     avatar: "https://picsum.photos/200/300",
@@ -43,7 +56,12 @@ const newUser = {
 }
 addUser(newUser)
 
-
+const updatedUser = {
+    name: "Nome 2",
+    avatar: "https://picsum.photos/200/300",
+    city: "Cidade 2"
+}
+updateUser(updatedUser, 9)
 
 getUsers()
-getUser()
+getUser(9)
