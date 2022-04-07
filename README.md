@@ -849,6 +849,79 @@ Edite o arquivo index.html conforme exemplo abaixo
 
 ## Fetch-PUT
 
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+app.route('/api/:id').put((req, res) => {
+  const userId = req.params.id
+  const user = users.find(user => Number(user.id) === Number(userId))
+
+  if (!user) {
+    return res.json('User nor found!')
+  }
+
+  const updatedUser = {
+    ...user,
+    name: req.body.name,
+    avatar: req.body.avatar,
+    city: req.body.city
+  }
+
+  users = users.map(user => {
+    if (Number(user.id) === Number(userId)) {
+      user = updatedUser
+    }
+    return user
+  })
+
+  res.json("Updated user")
+})
+```
+
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+const url = "http://localhost:5500/api"
+//PUT
+function updateUser(updatedUser, id) {
+    fetch(`${url}/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(updatedUser),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => alertApi.textContent = data)
+        .catch(error => console(error))
+}
+
+const updatedUser = {
+    name: "Nome 2",
+    avatar: "https://picsum.photos/200/300",
+    city: "Cidade 2"
+}
+updateUser(updatedUser, 9)
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo API com Fetch</title>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div id="alertApi">ok</div>
+    <hr>
+    <div id="renderApiResult"></div>
+    <hr>
+    <p id="userName"></p>
+    <p id="userCity"></p>
+    <img src="" id="userAvatar">
+</body>
+</html>
+```
+
 ## Fetch-DELETE
 
 
