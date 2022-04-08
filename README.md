@@ -990,19 +990,44 @@ Edite o arquivo index.html conforme exemplo abaixo
 </h4>
 
 ## API no Front-End com Axios
-
-
-
-
-
-
+Documentação oficial no link: <a href="https://axios-http.com/ptbr/docs/intro">axios-http.com</a>
+Para executar será necessário startar o node no diretório node-api-discover-main utilizando o comando npm start
 <h4 align="right">
 
 [Voltar para o Menu Geral](#menu-geral)
 </h4>
 
 ## Axios-GET
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+const url = "http://localhost:5500/api"
 
+function getUser(){
+    axios.get(url)
+    .then(response => {
+        // console.log(response.data)
+        apiResult.textContent = JSON.stringify(response.data)
+    })
+    .catch(error => console.error(error))
+}
+
+getUser()
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo API com AXIOS</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div id="apiResult"></div>
+</body>
+</html>
+```
 
 
 
