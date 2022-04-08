@@ -60,6 +60,12 @@ Formação Fullstack - Introdução 🚀
       * [Fetch-POST](#fetch-post)
       * [Fetch-PUT](#fetch-put)
       * [Fetch-DELETE](#fetch-delete)
+    * [API no Front-End com Axios](#api-no-front-end-com-axios)
+      * [Axios-GET](#axios-get)
+      * [Axios-GET com parâmentros](#axios-get-com-parâmentros)
+      * [Axios-POST](#axios-post)
+      * [Axios-PUT](#axios-put)
+      * [Axios-DELETE](#axios-delete)
 
       
   * [Autor](#autor)
@@ -983,9 +989,78 @@ Edite o arquivo index.html conforme exemplo abaixo
 [Voltar para o Menu Geral](#menu-geral)
 </h4>
 
+## API no Front-End com Axios
 
 
 
+
+
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
+
+## Axios-GET
+
+
+
+
+
+
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
+
+## Axios-GET com parâmentros
+
+
+
+
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
+
+
+## Axios-POST
+
+
+
+
+
+
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
+
+## Axios-PUT
+
+
+
+
+
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
+
+## Axios-DELETE
+
+
+
+
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
 
 ## Autor
 <img src="https://avatars.githubusercontent.com/u/13952621?v=4" width="100px;" alt=""/>
