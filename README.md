@@ -922,8 +922,66 @@ Edite o arquivo index.html conforme exemplo abaixo
 </html>
 ```
 
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
+
 ## Fetch-DELETE
 
+Edite o arquivo index.js conforme exemplo abaixo
+```shell
+app.route('/api/:id').delete((req, res) => {
+  const userId = req.params.id
+
+  users = users.filter(user => Number(user.id) !== Number(userId))
+
+  res.json('Deleted User')
+})
+```
+
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+const url = "http://localhost:5500/api"
+//DELETE
+function deleteUser(id) {
+    fetch(`${url}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => alertApi.textContent = data)
+        .catch(error => console(error))
+}
+deleteUser(11)
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo API com Fetch</title>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div id="alertApi">ok</div>
+    <hr>
+    <div id="renderApiResult"></div>
+    <hr>
+    <p id="userName"></p>
+    <p id="userCity"></p>
+    <img src="" id="userAvatar">
+</body>
+</html>
+```
+
+<h4 align="right">
+
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
 
 
 

@@ -49,19 +49,34 @@ function updateUser(updatedUser, id) {
         .catch(error => console(error))
 }
 
+//DELETE
+function deleteUser(id) {
+    fetch(`${url}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => alertApi.textContent = data)
+        .catch(error => console(error))
+}
+
 const newUser = {
     name: "Teste",
     avatar: "https://picsum.photos/200/300",
     city: "asd"
 }
-addUser(newUser)
+// addUser(newUser)
 
 const updatedUser = {
     name: "Nome 2",
     avatar: "https://picsum.photos/200/300",
     city: "Cidade 2"
 }
-updateUser(updatedUser, 9)
+// updateUser(updatedUser, 9)
+
+deleteUser(11)
 
 getUsers()
 getUser(9)
