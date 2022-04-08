@@ -62,8 +62,8 @@ Formação Fullstack - Introdução 🚀
       * [Fetch-DELETE](#fetch-delete)
     * [API no Front-End com Axios](#api-no-front-end-com-axios)
       * [Axios-GET](#axios-get)
-      * [Axios-GET com parâmentros](#axios-get-com-parâmentros)
       * [Axios-POST](#axios-post)
+      * [Axios-GET com parâmentros](#axios-get-com-parâmentros)
       * [Axios-PUT](#axios-put)
       * [Axios-DELETE](#axios-delete)
 
@@ -1000,6 +1000,7 @@ Para executar será necessário startar o node no diretório node-api-discover-m
 ## Axios-GET
 Edite o arquivo main.js conforme exemplo abaixo
 ```shell
+//GET
 const url = "http://localhost:5500/api"
 
 function getUser(){
@@ -1028,11 +1029,37 @@ Edite o arquivo index.html conforme exemplo abaixo
 </body>
 </html>
 ```
+Atualize a index.html no navegador
 
 
+<h4 align="right">
 
+[Voltar para o Menu Geral](#menu-geral)
+</h4>
 
+## Axios-POST
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+//POST
+function addNewUser(newUser){
+    axios.post(url, newUser)
+    .then(response => {
+        console.log(response)
+    })
+    .catch(error => console.error(error))
+}
 
+const newUser = {
+    name: "teste",
+    avatar: "https://picsum.photos/200/300",
+    city: "teste2"
+}
+
+addNewUser()
+```
+
+Obs: O arquivo index.html não será modificado
+Atualize a index.html no navegador
 
 <h4 align="right">
 
@@ -1040,20 +1067,6 @@ Edite o arquivo index.html conforme exemplo abaixo
 </h4>
 
 ## Axios-GET com parâmentros
-
-
-
-
-
-<h4 align="right">
-
-[Voltar para o Menu Geral](#menu-geral)
-</h4>
-
-
-## Axios-POST
-
-
 
 
 
