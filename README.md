@@ -682,7 +682,7 @@ Edite o arquivo index.html conforme exemplo abaixo
 </html>
 ```
 
-Edite o arquivo index.html conforme exemplo abaixo
+Edite o arquivo main.js conforme exemplo abaixo
 ```shell
 const url="http://localhost:5500/api"
 
