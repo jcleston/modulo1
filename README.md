@@ -1144,7 +1144,20 @@ Atualize a index.html no navegador
 
 ## Axios-DELETE
 
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+//DELETE
+function deleteUser(id) {
+    axios.delete(`${url}/${id}`)
+        .then(response => console.log(response))
+        .catch(error => console.error(error))
+}
 
+deleteUser(4)
+```
+
+Obs: O arquivo index.html não será modificado
+Atualize a index.html no navegador
 
 
 
