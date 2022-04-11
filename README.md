@@ -1108,7 +1108,6 @@ Atualize a index.html no navegador
 
 
 
-
 <h4 align="right">
 
 [Voltar para o Menu Geral](#menu-geral)
@@ -1116,9 +1115,26 @@ Atualize a index.html no navegador
 
 ## Axios-PUT
 
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+//PUT
+const userUpdated = {
+    name: "teste3",
+    avatar: "https://picsum.photos/200/300",
+    city: "Teste 3"
+}
 
+function updateUser(id,userUpdated) {
+    axios.put(`${url}/${id}`, updateUser)
+        .then(response => console.log(response))
+        .catch(error => console.error(error))
+}
 
+updateUser(3,userUpdated)
+```
 
+Obs: O arquivo index.html não será modificado
+Atualize a index.html no navegador
 
 
 <h4 align="right">
