@@ -42,7 +42,7 @@ function getUser(id) {
 
 //PUT
 function updateUser(id, userUpdated) {
-    axios.put(`${url}/${id}`, updateUser)
+    axios.put(`${url}/${id}`, userUpdated)
         .then(response => console.log(response))
         .catch(error => console.error(error))
 }
@@ -54,8 +54,8 @@ function deleteUser(id) {
         .catch(error => console.error(error))
 }
 
-deleteUser(4)
-// updateUser(2, userUpdated)
+deleteUser(3)
+updateUser(2, userUpdated)
 getUsers()
-getUser(5)
-// addNewUser(newUser)
+getUser(1)
+addNewUser(newUser)
