@@ -9,6 +9,7 @@ const userUpdated = {
     avatar: "https://picsum.photos/200/300",
     city: "Teste 3"
 }
+
 //GET
 function getUsers() {
     axios.get(url)
