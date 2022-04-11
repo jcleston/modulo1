@@ -1,4 +1,14 @@
 const url = "http://localhost:5500/api"
+const newUser = {
+    name: "Teste",
+    avatar: "https://picsum.photos/200/300",
+    city: "asd"
+}
+const updatedUser = {
+    name: "Nome 2",
+    avatar: "https://picsum.photos/200/300",
+    city: "Cidade 2"
+}
 
 // GET
 function getUsers() {
@@ -62,21 +72,8 @@ function deleteUser(id) {
         .catch(error => console(error))
 }
 
-const newUser = {
-    name: "Teste",
-    avatar: "https://picsum.photos/200/300",
-    city: "asd"
-}
-// addUser(newUser)
-
-const updatedUser = {
-    name: "Nome 2",
-    avatar: "https://picsum.photos/200/300",
-    city: "Cidade 2"
-}
-// updateUser(updatedUser, 9)
-
 deleteUser(11)
-
+updateUser(updatedUser, 9)
 getUsers()
 getUser(9)
+addUser(newUser)
