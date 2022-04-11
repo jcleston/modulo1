@@ -1003,7 +1003,7 @@ Edite o arquivo main.js conforme exemplo abaixo
 //GET
 const url = "http://localhost:5500/api"
 
-function getUser(){
+function getUsers(){
     axios.get(url)
     .then(response => {
         // console.log(response.data)
@@ -1012,7 +1012,7 @@ function getUser(){
     .catch(error => console.error(error))
 }
 
-getUser()
+getUsers()
 ```
 
 Edite o arquivo index.html conforme exemplo abaixo
@@ -1055,7 +1055,7 @@ const newUser = {
     city: "teste2"
 }
 
-addNewUser()
+addNewUser(newUser)
 ```
 
 Obs: O arquivo index.html não será modificado
@@ -1068,6 +1068,43 @@ Atualize a index.html no navegador
 
 ## Axios-GET com parâmentros
 
+Edite o arquivo main.js conforme exemplo abaixo
+```shell
+//GET com parâmetro
+function getUser(id){
+    axios.get(`${url}/${id}`)
+    .then(response => {
+        userName.textContent = response.data.name
+        userCity.textContent = response.data.city
+        userID.textContent = response.data.id
+        userAvatar.src = response.data.avatar
+    })
+    .catch(error => console.error(error))
+}
+
+getUser(1)
+```
+
+Edite o arquivo index.html conforme exemplo abaixo
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo API com AXIOS</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div id="apiResult">oi</div>
+    <hr />
+    <p id="userName"></p>
+    <p id="userCity"></p>
+    <p id="userID"></p>
+    <img src="" id="userAvatar">
+</body>
+</html>
+```
+Atualize a index.html no navegador
 
 
 
